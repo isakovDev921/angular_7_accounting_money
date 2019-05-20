@@ -8,6 +8,7 @@ import { OrderListModule } from 'primeng/orderlist';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AuthModule } from './auth/auth.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthModule } from './auth/auth.module';
     AccordionModule,
     OrderListModule,
     ButtonModule,
-    AuthModule
+    AuthModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
