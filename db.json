@@ -1,19 +1,14 @@
 {
-  "posts": [
+  "users": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "email": "test@i.ua",
+      "password": "12345678",
+      "name": "Администратор"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
+  "bill": {
+    "value": 100000,
+    "currency": "RUB"
   }
 }

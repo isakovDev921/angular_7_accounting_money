@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: 'wfm-login',
-    templateUrl: './auth.component.html'
+    templateUrl: './auth.component.html',
+    styleUrls: ['./auth.component.css']
 })
 export class AuthComponent implements OnInit {
 
@@ -11,6 +12,6 @@ export class AuthComponent implements OnInit {
 
     }
     ngOnInit() {
-       // this.router.navigate(['/login']);
+       this.router.navigate(['/login']);
     }
 }
