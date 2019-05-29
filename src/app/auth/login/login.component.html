@@ -1,5 +1,6 @@
 <p class="text-xs-center">Войдите для работы:</p>
 
+<div class="alert alert-{{message.type}}" *ngIf="message.text">{{message.text}}</div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
   <div class="form-group" [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
@@ -9,7 +10,8 @@
       </div>
 
       <div class="col-3">
-        <input type="text" class="form-control underlined" id="email" placeholder="Введите ваш email" formControlName="email" />
+        <input type="text" class="form-control underlined" id="email" placeholder="Введите ваш email"
+          formControlName="email" />
       </div>
     </div>
     <span class="form-help-text" *ngIf="form.get('email').invalid && form.get('email').touched">
@@ -25,7 +27,8 @@
       </div>
 
       <div class="col-3">
-        <input type="password" class="form-control underlined" id="password" placeholder="Пароль" formControlName="password" />
+        <input type="password" class="form-control underlined" id="password" placeholder="Пароль"
+          formControlName="password" />
       </div>
     </div>
     <span class="form-help-text" *ngIf="form.get('password').invalid && form.get('password').touched">

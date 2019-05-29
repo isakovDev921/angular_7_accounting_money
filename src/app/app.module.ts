@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AccordionModule } from 'primeng/components/accordion/accordion';
 import { OrderListModule } from 'primeng/orderlist';
@@ -10,6 +11,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { InputTextModule } from 'primeng/inputtext';
+import { UserService } from './shared/services/users';
 @NgModule({
   declarations: [
     AppComponent
@@ -17,9 +19,10 @@ import { InputTextModule } from 'primeng/inputtext';
   imports: [
     BrowserModule,   
     AuthModule,
-    AppRoutingModule  
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
