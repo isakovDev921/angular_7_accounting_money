@@ -12,6 +12,7 @@ import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { InputTextModule } from 'primeng/inputtext';
 import { UserService } from './shared/services/users';
+import { AuthService } from './shared/services/auth.service';
 @NgModule({
   declarations: [
     AppComponent
@@ -22,7 +23,7 @@ import { UserService } from './shared/services/users';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

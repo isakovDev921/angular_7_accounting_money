@@ -1,2 +1,11 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+body{
+    background-color: lightgrey;
+}
+
+.container{
+    width: 25%;
+    color: lightseagreen;
+    background-color: bisque;
+}
