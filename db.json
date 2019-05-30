@@ -1,11 +1,28 @@
 {
   "users": [
-    {    
-      "id": 1, 
+    {
+      "id": 1,
       "email": "test@i.ua",
       "password": "12345678",
-      "name": "Администратор"     
+      "name": "Администратор"
+    },
+    {
+      "email": "test2@i.ua",
+      "password": "12345678",
+      "name": "1",
+      "id": 2
+    },
+    {
+      "email": "test2@i.ua",
+      "password": "12345678",
+      "name": "1",
+      "id": 3
+    },
+    {
+      "email": "test1@i.ua",
+      "password": "12345678",
+      "name": "1",
+      "id": 4
     }
   ]
-
 }

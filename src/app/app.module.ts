@@ -11,7 +11,7 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { AuthModule } from './auth/auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { InputTextModule } from 'primeng/inputtext';
-import { UserService } from './shared/services/users';
+import { UserService } from './shared/services/users.service';
 import { AuthService } from './shared/services/auth.service';
 @NgModule({
   declarations: [

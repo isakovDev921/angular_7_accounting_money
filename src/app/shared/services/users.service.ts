@@ -8,17 +8,18 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class UserService {
-    constructor(private httpClient: HttpClient) {        
-     }
+    constructor(private httpClient: HttpClient) {
+    }
 
     getUserByEmail(email: string) {
-
         return this.httpClient.get(`http://localhost:3000/users?email=${email}`)
             .pipe(
                 map((user: User[]) => {
-                return user[0] ? user[0] : undefined;
-                }
-                ))
+                    return user[0] ? user[0] : undefined;
+                }));
+    }
 
+    createNewUser(user: User) {
+        return this.httpClient.post('http://localhost:3000/users', user);
     }
 }
