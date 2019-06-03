@@ -22,12 +22,19 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "styles": [
-              "src/styles.css",
-              "node_modules/primeicons/primeicons.css",
-              "node_modules/primeng/resources/themes/rhea/theme.css",
-              "node_modules/primeng/resources/primeng.min.css"
+            "assets": [              
+              "src/assets"
             ],
+            "styles": [
+              "src/styles.scss",
+              "src/assets/vendor.css",
+              "src/assets/theme.css"              
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src"
+              ]
+            },
             "scripts": [],
             "es5BrowserSupport": true
           },

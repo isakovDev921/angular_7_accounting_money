@@ -12,8 +12,7 @@ const routes: Routes =[
          { path: 'bill', component: BillPageComponent},
          { path: 'history', component: HistoryPageComponent},
          { path: 'planning', component: PlanningPageComponent},
-         { path: 'records', component: RecordsPageComponent}
-    
+         { path: 'records', component: RecordsPageComponent}    
     ]}
 ];
 
