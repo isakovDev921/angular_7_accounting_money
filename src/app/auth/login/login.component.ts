@@ -31,13 +31,14 @@ export class LoginComponent implements OnInit {
     this.message = new Message('danger', '');
 
     this._route.queryParams
-    .subscribe((params: Params) => {
-      if (params['nowCanLogin']) {
-        this.showMessage({
-          text: 'Теперь вы можете зайти в систему',
-          type: 'success'});
-      }
-    });    
+      .subscribe((params: Params) => {
+        if (params['nowCanLogin']) {
+          this.showMessage({
+            text: 'Теперь вы можете зайти в систему',
+            type: 'success'
+          });
+        }
+      });
 
     this.form = new FormGroup({
       'email': new FormControl(null, [Validators.required, Validators.email]),
@@ -80,11 +81,9 @@ export class LoginComponent implements OnInit {
             type: 'danger'
           });
         }
-
-
         // var test = data[0].email;          
         //  console.log('component ' + test );
       });
   }
-
+  
 }
