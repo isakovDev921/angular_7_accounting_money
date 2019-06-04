@@ -4,15 +4,17 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
 import { map } from 'rxjs/operators';
+import { BaseApi } from '../core/base-api';
 
 
 @Injectable()
-export class UserService {
-    constructor(private httpClient: HttpClient) {
+export class UserService extends BaseApi {
+    constructor(public http: HttpClient) {
+        super(http)
     }
 
     getUserByEmail(email: string) {
-        return this.httpClient.get(`http://localhost:3000/users?email=${email}`)
+        return this.get(`users?email=${email}`)
             .pipe(
                 map((user: User[]) => {
                     return user[0] ? user[0] : undefined;
@@ -20,6 +22,6 @@ export class UserService {
     }
 
     createNewUser(user: User) {
-        return this.httpClient.post('http://localhost:3000/users', user);
+        return this.post('users', user);
     }
 }
