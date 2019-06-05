@@ -22,10 +22,6 @@ export class BillPageComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
-
-
-
-
     this.sub1 =
       combineLatest( //подписывается на 2 асинхронных события,
         // для синхронного отображения представления
@@ -52,8 +48,6 @@ export class BillPageComponent implements OnInit, OnDestroy {
       this.isLoaded = true;
     })
   }
-
-
 
   getMomentDate() {
     var mm = this.date.getMonth() + 1; // getMonth() is zero-based
