@@ -38,7 +38,11 @@ export class BillPageComponent implements OnInit, OnDestroy {
   //чтобы подписка не съедала память, нужно делать отписку
   ngOnDestroy() {
     this.sub1.unsubscribe();
-    this.sub2.unsubscribe();
+    if (this.sub2) {
+    
+      this.sub2.unsubscribe();
+    }
+  
   }
 
   onRefresh() {

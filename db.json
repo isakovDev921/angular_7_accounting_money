@@ -16,6 +16,16 @@
       "name": "Дом",
       "capacity": 15000,
       "id": 1
+    },
+    {
+      "name": "12",
+      "capacity": 232,
+      "id": 2
+    },
+    {
+      "name": "sdfds",
+      "capacity": 121,
+      "id": 3
     }
   ]
 }

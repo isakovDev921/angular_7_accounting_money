@@ -47,7 +47,7 @@ export class LoginComponent implements OnInit {
   }
 
   private showMessage(message: Message) {
-    console.log(this);
+
     this.message = message;
 
     window.setTimeout(() => {
@@ -67,8 +67,8 @@ export class LoginComponent implements OnInit {
             window.localStorage.setItem('user', JSON.stringify(user));
             this.authService.login();
             this.router.navigate(['/system', 'bill']);
+            //вход в систему
 
-            console.log("Вход");
           } else {
             this.showMessage({
               text: 'Пароль не верный',
@@ -85,5 +85,5 @@ export class LoginComponent implements OnInit {
         //  console.log('component ' + test );
       });
   }
-  
+
 }

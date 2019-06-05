@@ -10,7 +10,7 @@ export class CurrencyCardComponent implements OnInit {
   currencies: string[] = ['RUB', 'UAH', 'USD'];
 
   ngOnInit() {
-    console.log(this.currencies);
+  
   }
 
 }

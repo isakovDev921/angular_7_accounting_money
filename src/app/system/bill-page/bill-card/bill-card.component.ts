@@ -13,20 +13,20 @@ export class BillCardComponent implements OnInit {
 
   constCurrency = 1;
   dollar: number;
-  euro: number; 
+  euro: number;
 
   constructor() { }
 
   ngOnInit() {
 
-    const { rates } = this.currency;   
-   // this.dollar = Number((rates['UAH'] / rates['USD']).toFixed(2)) * this.bill.value;
-   // this.euro = Number((rates['UAH']).toFixed(2)) * this.bill.value;
+    const { rates } = this.currency;
+
+    // дата без пайпа
+    // this.dollar = Number((rates['UAH'] / rates['USD']).toFixed(2)) * this.bill.value;
+    // this.euro = Number((rates['UAH']).toFixed(2)) * this.bill.value;
 
     this.dollar = (rates['UAH'] / rates['USD']) * this.bill.value;
     this.euro = rates['UAH'] * this.bill.value;
-
-    console.log(this.currency);
   }
 
 }
