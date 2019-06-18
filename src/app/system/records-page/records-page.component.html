@@ -22,7 +22,7 @@
   </div>
   <div class="row">
     <div class="col-md-6">
-      <wfm-edit-category [categories]="categories"></wfm-edit-category>
+      <wfm-edit-category [categories]="categories" (onCategoryEdit)="categoryWasEdited($event)"></wfm-edit-category>
       <!-- Сатегории передают в @Input() categories: Category[] = []; -->
     </div>
   </div>

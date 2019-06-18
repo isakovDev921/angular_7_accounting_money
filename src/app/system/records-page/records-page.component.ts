@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import { ICategory } from '../shared/models/category.model';
+import { Category } from '../shared/models/category.model';
 import { CategoriesService } from '../shared/services/categories.service';
 
 
@@ -13,7 +13,7 @@ import { CategoriesService } from '../shared/services/categories.service';
 export class RecordsPageComponent implements OnInit {
 
 
-  categories: ICategory[] = []; //создает поте типа ICategory и присваеваем ему пустой массив;
+  categories: Category[] = []; //создает поте типа ICategory и присваеваем ему пустой массив;
   isLoaded = false;
 
   constructor(
@@ -22,7 +22,7 @@ export class RecordsPageComponent implements OnInit {
 
   ngOnInit() {
     this.categoriesService.getCategories()
-      .subscribe((categories: ICategory[]) => {
+      .subscribe((categories: Category[]) => {
         this.categories = categories;
         this.isLoaded = true; //как только загрузились все категории, тогда можно рисовать все компоненты
       });
@@ -32,8 +32,13 @@ export class RecordsPageComponent implements OnInit {
 
   }
 
-  newCategoryAdded(category: ICategory) {
+  newCategoryAdded(category: Category) {
     this.categories.push(category);
+  }
+
+  categoryWasEdited(category: Category){
+    const idx = this.categories.findIndex(c => c.id === category.id);
+    this.categories[idx] = category;
   }
   
 

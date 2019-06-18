@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { CategoriesService } from '../../shared/services/categories.service';
-import { ICategory } from '../../shared/models/category.model';
+import { Category } from '../../shared/models/category.model';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { ICategory } from '../../shared/models/category.model';
 })
 export class AddCategoryComponent implements OnInit {
 
-  @Output() onCategoryAdd = new EventEmitter<ICategory>()
+  @Output() onCategoryAdd = new EventEmitter<Category>()
 
   constructor(private categoriesService: CategoriesService) { }
 
@@ -27,10 +27,10 @@ export class AddCategoryComponent implements OnInit {
       capacity *= -1;
     }
 
-    let category: ICategory = { name, capacity };
+    let category: Category = { name, capacity };
 
     this.categoriesService.addCategory(category)
-      .subscribe((category: ICategory) => {
+      .subscribe((category: Category) => {
        form.reset();
        form.form.patchValue({capacity: 1});//значения поля по умолчанию
 
