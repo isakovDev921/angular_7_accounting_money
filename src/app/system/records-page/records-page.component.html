@@ -3,19 +3,27 @@
     Страница записей <span class="sparkline bar"></span>
   </h3>
 </div>
-<section class="section">
+
+<section class="selection text-center" *ngIf="!isLoaded">
+  Loading...
+</section>
+
+<section class="section" *ngIf="isLoaded">
+  <!-- отрисовуем все компоненты только тогда когда все загружено -->
   <div class="row">
     <div class="col-md-6">
-     <wfm-add-event></wfm-add-event>  
+      <wfm-add-event></wfm-add-event>
     </div>
     <div class="col-md-6">
-      <wfm-add-category (onCategoryAdd)="newCategoryAdd($event)"></wfm-add-category> <!-- колбек обработчик новой категории в список -->
-     
+      <wfm-add-category (onCategoryAdd)="newCategoryAdded($event)"></wfm-add-category>
+      <!-- колбек обработчик новой категории в список -->
+
     </div>
   </div>
   <div class="row">
     <div class="col-md-6">
-      <wfm-edit-category></wfm-edit-category>
+      <wfm-edit-category [categories]="categories"></wfm-edit-category>
+      <!-- Сатегории передают в @Input() categories: Category[] = []; -->
     </div>
   </div>
 </section>

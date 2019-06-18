@@ -26,6 +26,11 @@
       "name": "sdfds",
       "capacity": 121,
       "id": 3
+    },
+    {
+      "name": "Test",
+      "capacity": 123,
+      "id": 4
     }
   ]
 }
