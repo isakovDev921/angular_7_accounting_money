@@ -8,7 +8,7 @@
     }
   ],
   "bill": {
-    "value": 111113,
+    "value": 111097,
     "currency": "RUB"
   },
   "categories": [
@@ -92,6 +92,22 @@
       "date": "18.06.192019 15:53:16",
       "description": "rewr",
       "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 16,
+      "category": 1,
+      "date": "18.06.192019 15:58:46",
+      "description": "к",
+      "id": 11
+    },
+    {
+      "type": "outcome",
+      "amount": 0,
+      "category": 1,
+      "date": "18.06.192019 15:58:48",
+      "description": " ",
+      "id": 12
     }
   ]
 }

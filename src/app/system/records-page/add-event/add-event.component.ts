@@ -37,7 +37,7 @@ export class AddEventComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.message = new Message('danger', '');
+    this.message = new Message('', '');
   }
 
   private showMessage(text: string) {
@@ -71,12 +71,17 @@ export class AddEventComponent implements OnInit, OnDestroy {
         let value = 0;
         if (type === 'outcome') {
           if (amount > bill.value) {
-            this.showMessage(`На счету недостаточно средств. Вам не хватает ${amount - bill.value}`);
-            return;
+            this.message = new Message('danger', '');
+            return this.showMessage(`На счету недостаточно средств. Вам не хватает ${amount - bill.value}`);
+            
           } else {
             value = bill.value - amount;
           }
-        } else {
+        } else if(type === 'income') {
+          this.message = new Message('success', '');
+          return this.showMessage(`Зачисление средств на счет произошло успешно: ${amount}. Доступно ${bill.value}`);
+        }
+        else {
           value = bill.value + amount;
         }
 
