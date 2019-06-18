@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { BaseApi } from 'src/app/shared/core/base-api';
 import { Category } from '../models/category.model';
-import { Observable } from 'rxjs';
+
 
 @Injectable()
 export class CategoriesService extends BaseApi{

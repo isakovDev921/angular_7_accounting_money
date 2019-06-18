@@ -27,7 +27,7 @@ export class AddCategoryComponent implements OnInit {
       capacity *= -1;
     }
 
-    let category: Category = { name, capacity };
+    const category: Category = { name: name, capacity: capacity };
 
     this.categoriesService.addCategory(category)
       .subscribe((category: Category) => {

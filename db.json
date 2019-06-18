@@ -8,29 +8,90 @@
     }
   ],
   "bill": {
-    "value": 10000,
+    "value": 111113,
     "currency": "RUB"
   },
   "categories": [
     {
-      "name": "ред23",
+      "name": "Дом",
       "capacity": 10,
       "id": 1
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 1250,
+      "category": 2,
+      "date": "12.06.2017 19:49:02",
+      "description": "Подарили еду в гостях"
     },
     {
-      "name": "авыаы",
-      "capacity": 232,
-      "id": 2
+      "id": 2,
+      "type": "outcome",
+      "amount": 1300,
+      "category": 1,
+      "date": "12.06.2017 19:49:02",
+      "description": "Купил ролс ройс"
     },
     {
-      "name": "sdfds",
-      "capacity": 121,
+      "amount": 132423423432424,
+      "category": 1,
+      "date": "18.06.192019 15:44:45",
+      "description": "Ощадбанк",
       "id": 3
     },
     {
-      "name": "Test",
-      "capacity": 123,
+      "amount": 132423423432424,
+      "category": 1,
+      "date": "18.06.192019 15:44:49",
+      "description": "Ощадбанк",
       "id": 4
+    },
+    {
+      "amount": 132423423432424,
+      "category": 1,
+      "date": "18.06.192019 15:44:54",
+      "description": "Ощадбанк",
+      "id": 5
+    },
+    {
+      "amount": 132423423432424,
+      "category": 1,
+      "date": "18.06.192019 15:44:55",
+      "description": "Ощадбанк",
+      "id": 6
+    },
+    {
+      "amount": 132423423432424,
+      "category": 1,
+      "date": "18.06.192019 15:44:56",
+      "description": "Ощадбанк",
+      "id": 7
+    },
+    {
+      "amount": 1222222222222222,
+      "category": 1,
+      "date": "18.06.192019 15:47:39",
+      "description": "Ощадбанк",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "category": 1,
+      "date": "18.06.192019 15:50:30",
+      "description": "ds",
+      "id": 9
+    },
+    {
+      "type": "income",
+      "amount": 111111,
+      "category": 1,
+      "date": "18.06.192019 15:53:16",
+      "description": "rewr",
+      "id": 10
     }
   ]
 }
